@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.main-content {
+    min-height: 100vh; /* 100vh means 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

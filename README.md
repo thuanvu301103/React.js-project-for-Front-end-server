@@ -63,6 +63,7 @@ fe-server/
 │   ├── App.js
 │   ├── index.js
 │   └── serviceWorker.js
+│   └── theme.js
 ├── .env
 ├── .gitignore
 ├── package.json
@@ -83,3 +84,36 @@ Explanation:
 - ```.env```: a simple text file used to store environment variables for your project.
 - ```package.json```: Contains metadata about the project and its dependencies.
 - ```README.md```: A markdown file with information about the project.
+
+## Theme Color
+- Create a Theme File: Create a new file called ```theme.js``` in the ```src``` directory and define your custom themes for both light and dark modes.
+- Apply the Theme: Wrap your application with the ```ThemeProvider``` component to apply the custom themes. Update your ```index.js``` file
+```javascript
+import React, {useState} from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import { lightTheme, darkTheme } from './theme';
+import CssBaseline from '@mui/material/CssBaseline';
+import Switch from '@mui/material/Switch';
+
+function App() {
+
+    /* Handle Dark mode */
+
+    // Get savedMode from localStorage
+    const [darkMode, setDarkMode] = useState(() => {/*...*/});
+
+    // Handle Theme Change function - Save the change to localStorage
+    const handleThemeChange = () => {
+        setDarkMode((prevMode) => {/*...*/});
+    };
+
+    return (
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+            <Switch checked={darkMode} onChange={handleThemeChange} />
+            <CssBaseline />
+        </ThemeProvider>
+  );
+}
+
+export default App;
+```
