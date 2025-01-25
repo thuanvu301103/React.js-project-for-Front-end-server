@@ -32,6 +32,13 @@ The port for the React development server is determined by the ```react-scripts`
 PORT=3001
 ```
 
+## Install Material-UI
+- Material-UI is a popular React UI framework that implements Google's Material Design principles.
+- Run the following command to install Material-UI and its dependencies:
+```bash
+npm install @mui/material @emotion/react @emotion/styled --save-dev
+```
+
 ## Basic structure for a React.js Front-end server
 
 ```
