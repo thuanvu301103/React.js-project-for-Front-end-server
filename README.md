@@ -5,7 +5,7 @@ A basic React.js project sample for Front-end-server
 
 - Open your terminal: Navigate to the directory where you cloned the repository
 ```bash
-cd path/to/your/directory/React.js-project-for-Front-end-server
+cd path/to/your/directory/React.js-project-for-Front-end-server/fe-server
 ```
 - Install dependencies: Run the following command to install all the necessary dependencies
 ```bash
@@ -24,6 +24,12 @@ netstat -ano | findstr :<Port number>
 - Kill that process:
 ```bash
 taskkill /F /PID <PID>
+```
+
+## Change Server port
+The port for the React development server is determined by the ```react-scripts``` package, which is part of ```Create React App```. By default, it runs on port ```3000```. However, you can change the port by creating a ```.env``` file in the root directory of your project and adding the following line:
+```bash
+PORT=3001
 ```
 
 ## Basic structure for a React.js Front-end server
@@ -50,6 +56,7 @@ fe-server/
 │   ├── App.js
 │   ├── index.js
 │   └── serviceWorker.js
+├── .env
 ├── .gitignore
 ├── package.json
 └── README.md
@@ -66,5 +73,6 @@ Explanation:
 - ```index.js```: The entry point of the React application.
 - ```serviceWorker.js```: Used for progressive web app features.
 - ```.gitignore```: Specifies which files and directories to ignore in version control.
+- ```.env```: a simple text file used to store environment variables for your project.
 - ```package.json```: Contains metadata about the project and its dependencies.
 - ```README.md```: A markdown file with information about the project.
