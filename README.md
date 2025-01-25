@@ -199,7 +199,7 @@ const App = () => {
 }
 ```
 - Consume Context: Use the ```useContext``` hook or the ```Consumer``` component to access the context value in your components.
-+ Using ```useContext``` hook:
+	+ Using ```useContext``` hook:
 ```javascript
 import React, { useContext } from 'react';
 
@@ -208,7 +208,7 @@ const MyComponent = () => {
   return <div>{contextValue}</div>;
 };
 ```
-- Using ```Consumer``` component:
+	+ Using ```Consumer``` component:
 ```javascript
 import React from 'react';
 
