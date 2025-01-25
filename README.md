@@ -59,6 +59,9 @@ fe-server/
 │   ├── pages/
 │   │   ├── Home.js
 │   │   ├── About.js
+│   │   └── …
+│   ├── context/
+│   │   ├── DarkoModeContext.js
 │   │   └── ...
 │   ├── App.js
 │   ├── index.js
@@ -77,6 +80,7 @@ Explanation:
 - ```assets/```: Contains assets like images and styles.
 - ```components/```: Contains reusable components like Header, Footer, etc.
 - ```pages/```: Contains page components like Home, About, etc.
+- ```context/```: Contains all your context-related files
 - ```App.js```: The main component that includes all other components.
 - ```index.js```: The entry point of the React application.
 - ```serviceWorker.js```: Used for progressive web app features.
@@ -169,4 +173,50 @@ const LanguageSwitcher = () => {
 };
 
 export default LanguageSwitcher;
+```
+
+## Context
+- Context in React.jsis a way to pass data through the component tree without having to pass props down manually at every level. It allows you to share values like themes, user preferences, authentication statuses, and more between different components without the need for prop drilling
+- Create Context:
+```javascript
+import React, { createContext } from 'react';
+
+// Create a context with default value
+const MyContext = createContext(defaultValue);
+```
+- Provide Context: Wrap your component tree with a provider component and pass the current value of the context to it.
+```javascript
+import React from 'react';
+
+const App = () => {
+  const [value, setValue] = React.useState('Hello World');
+
+  return (
+    <MyContext.Provider value={value}>
+      <MyComponent />
+    </MyContext.Provider>
+  );
+}
+```
+- Consume Context: Use the ```useContext``` hook or the ```Consumer``` component to access the context value in your components.
++ Using ```useContext``` hook:
+```javascript
+import React, { useContext } from 'react';
+
+const MyComponent = () => {
+  const contextValue = useContext(MyContext);
+  return <div>{contextValue}</div>;
+};
+```
+- Using ```Consumer``` component:
+```javascript
+import React from 'react';
+
+const MyComponent = () => {
+  return (
+    <MyContext.Consumer>
+      {value => <div>{value}</div>}
+    </MyContext.Consumer>
+  );
+};
 ```
