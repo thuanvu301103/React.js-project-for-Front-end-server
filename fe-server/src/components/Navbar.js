@@ -6,8 +6,12 @@ import {
     Button, IconButton
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+
+    const { t } = useTranslation();
+
     return (
         <AppBar position="static" sx={{ backgroundColor: 'black' }}>
             <Toolbar>
@@ -21,9 +25,9 @@ const Navbar = () => {
                 <Typography variant="h6" style={{ flexGrow: 1 }}>
                     username / project name
                 </Typography>
-                <Button color="inherit">Home</Button>
-                <Button color="inherit">About</Button>
-                <Button color="inherit">Contact</Button>
+                <Button color="inherit">{t('navbar.home')}</Button>
+                <Button color="inherit">{t('navbar.about')}</Button>
+                <Button color="inherit">{t('navbar.contact')}</Button>
             </Toolbar>
         </AppBar>
     );
