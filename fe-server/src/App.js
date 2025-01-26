@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { DesListItem } from './components/ListItem';
 import LngSwitch from './components/LngSwitch';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
@@ -37,6 +38,7 @@ function App() {
             <CssBaseline />
             <div className="main-content">
                 <Navbar />
+                    <DesListItem name="Script 1" description="This is a simple description" />
                 <Footer />
             </div>
         </ThemeProvider>

@@ -14,7 +14,7 @@ const lightTheme = createTheme({
         },
         text: {
             primary: '#000000', // Primary text color
-            secondary: '#ffffff', // Secondary text color
+            secondary: '#000000', // Secondary text color
         },
     },
 });
@@ -33,7 +33,7 @@ const darkTheme = createTheme({
         },
         text: {
             primary: '#ffffff', // Primary text color
-            secondary: '#000000', // Secondary text color
+            secondary: '#E8E8E8', // Secondary text color
         },
     },
 });

@@ -5,7 +5,8 @@
     "\\public\\locales",
     "\\public\\locales\\vi",
     "\\src",
-    "\\src\\components"
+    "\\src\\components",
+    "\\src\\context"
   ],
   "PreviewInSolutionExplorer": false
 }
