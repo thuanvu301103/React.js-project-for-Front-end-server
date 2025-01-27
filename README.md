@@ -221,5 +221,5 @@ const App = () => {
 	};
 	```
 
-## [Components](fe-server/src/components/README)
+## [Components](fe-server/src/components)
 Contains reusable React.js components 
