@@ -29,8 +29,8 @@ import Footer from './components/Footer';
 - **Description**: A component that represents a descriptive item of a list.
 - **Props**:
 	- `item` (object): contains name and decription.
-    		- `name` (string): The name of the item.
-    		- `description` (string): The description of the item.
+		- `name` (string): The name of the item.
+		- `description` (string): The description of the item.
 - **Usage**:
 ```javascript
 import { DesListItem } from './components/ListItem';
