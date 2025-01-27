@@ -59,6 +59,7 @@ import { FileStructListItem } from './components/ListItem';
 	- `ListItemComponents` (`ListItem` object): object that is the item of list
 	- `items` (Array(object)): the properties of object must correspond to `ListItemComponents`
 	- `itemsPerPage` (number): Max number of item per page of list. Default value: 30
+	- `search` (string): Name of search field of the items'object.
 - **Usage**:
 ```javascript
 import { PaginatedList } from './components/List';
