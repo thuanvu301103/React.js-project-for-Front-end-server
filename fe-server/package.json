@@ -41,6 +41,7 @@
     "@mui/material": "^6.4.1",
     "i18next": "^24.2.1",
     "react-i18next": "^15.4.0",
+    "react-router-dom": "^6.28.2",
     "web-vitals": "^4.2.4"
   }
 }
